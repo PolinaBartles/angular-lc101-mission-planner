@@ -13,7 +13,10 @@ export class EquipmentComponent implements OnInit {
     "Oxygen tanks"
   ];
 
+
   toolBeingEdited: string = null;
+  equipmentBeingEdited: string = null;
+
   constructor() { }
 
   ngOnInit() {
@@ -31,5 +34,11 @@ export class EquipmentComponent implements OnInit {
   edit(tool: string) {
     this.toolBeingEdited = tool;
   }
+
+  save(newTool: string, tool: string) {
+    tool = newTool;
+    this.equipmentBeingEdited = null;
+    }
+
 
 }
